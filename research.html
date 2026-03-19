@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - ASPIRE</title>
+    <meta name="description" content="Research topics including Self-initiated Repair, Improvisational Signing, and Dialogic Sign Language Recognition.">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">ASPIRE</a>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="research.html" class="nav-link active">Research</a></li>
+                    <li><a href="members.html" class="nav-link">Members</a></li>
+                    <li><a href="index.html#mission" class="nav-link">Mission</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="padding: 4rem 0;">
+            <div class="container hero-content">
+                <h1 class="hero-title">Our Research</h1>
+                <p class="hero-subtitle">Exploring the dynamics of real human interaction among Deaf signers.</p>
+            </div>
+            <div class="hero-background"></div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                
+                <article id="sir" class="research-topic" style="margin-bottom: 4rem;">
+                    <h2>Self-initiated Repair (SIR)</h2>
+                    <p>We analyze the <strong>Self-initiated Repair sequence</strong> in social interactions. This involves how signers correct or adjust their own signing during conversation.</p>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <img src="images/lab/proposal_fig_E_s_02.png" alt="Research Diagram" style="max-width: 80%; border-radius: 8px; box-shadow: var(--shadow);">
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Interactional dynamics in sign language.</p>
+                    </div>
+                    <p>The repair segment often includes an adjacency pair or side sequence, such as a question-answer sequence where signers ask interlocutors about unshared vocabulary using an integrated linguistic repertoire: signs, gesturing, fingerspelling, and mouthing.</p>
+                </article>
+
+                <hr style="border: 0; border-top: 1px solid #ddd; margin: 2rem 0;">
+
+                <article id="improvisational" class="research-topic" style="margin-bottom: 4rem;">
+                    <h2>Improvisational Signing</h2>
+                    <p>Improvisational signing highlights that communication is co-constructed. We study how Deaf individuals integrate linguistic and non-linguistic resources into a flexible communicative repertoire.</p>
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin: 2rem 0; justify-content: center;">
+                         <img src="images/lab/proposal_fig_E_s_01_1.png" alt="Improvisational Signing" style="max-width: 400px; border-radius: 8px; box-shadow: var(--shadow);">
+                         <div style="flex: 1; min-width: 300px;">
+                            <video controls preload="metadata" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
+                                <source src="images/pptx/media25.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p style="font-size: 0.9rem; color: #666; text-align: center;">Example of sign language interaction.</p>
+                         </div>
+                    </div>
+                    <p>This flexibility is especially evident among Deaf individuals in Japan, who constantly adapt to cultural environments where symbols and communication are not always guaranteed.</p>
+                </article>
+
+                <hr style="border: 0; border-top: 1px solid #ddd; margin: 2rem 0;">
+
+                <article id="cross-signing" class="research-topic" style="margin-bottom: 4rem;">
+                    <h2>Online Cross-signing</h2>
+                    <p>It has long been known that deaf people from different countries are able to establish communication with each other quickly (Zeshan, 2015). Our project tracks the development of <em>ad hoc</em> emerging communication right from the beginning.</p>
+                    <p><strong>Case Study: UK and Japan</strong><br>
+                    We observed that successful conveying of numerical expressions was higher in Japan to some extent, but participants from both regions demonstrated skillful use of gestures, International Signs, and other resources to bridge gaps.</p>
+                </article>
+
+                <hr style="border: 0; border-top: 1px solid #ddd; margin: 2rem 0;">
+
+                <article id="dslr" class="research-topic" style="margin-bottom: 4rem;">
+                    <h2>Dialogic Sign Language Recognition (DSLR)</h2>
+                    <p><strong>The Gap:</strong> Existing datasets lack dialogic interaction, relying mostly on monologic (single signer) data.</p>
+                    <p><strong>The Goal:</strong> To build technologies capable of recognizing and interpreting sign language in social, interactive contexts. We aim to move from Continuous Sign Language Recognition (CSLR) to Dialogic Sign Language Recognition (DSLR).</p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h4 class="footer-logo">ASPIRE</h4>
+                <p>Advanced Science for Partnership and Inclusive Research Engagement</p>
+            </div>
+            <div class="footer-contact">
+                <p>Contact: <a href="mailto:bono@nii.ac.jp">bono@nii.ac.jp</a></p>
+                <p>&copy; 2026 ASPIRE Project. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
