@@ -25,12 +25,15 @@
             </button>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="research.html" class="nav-link">Research</a></li>
-                    <li><a href="members.html" class="nav-link">Members</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="index.html" class="nav-link active" data-en="Home" data-ja="ホーム">Home</a></li>
+                    <li><a href="research.html" class="nav-link" data-en="Research" data-ja="研究">Research</a></li>
+                    <li><a href="members.html" class="nav-link" data-en="Members" data-ja="メンバー">Members</a></li>
+                    <li><a href="#contact" class="nav-link" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
                 </ul>
             </nav>
+            <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                <span class="lang-label">JA</span>
+            </button>
         </div>
     </header>
 
@@ -39,15 +42,16 @@
         <section class="hero hero-decorated">
             <div class="container hero-split">
                 <div class="hero-content">
-                    <h1 class="hero-title">Inclusive Science</h1>
-                    <p class="hero-subtitle">Transforming scientific practice so that linguistic and sensory minorities are active agents in the creation of knowledge.</p>
+                    <h1 class="hero-title" data-en="Inclusive Science" data-ja="インクルーシブ・サイエンス">Inclusive Science</h1>
+                    <p class="hero-subtitle" data-en="Transforming scientific practice so that linguistic and sensory minorities are active agents in the creation of knowledge." data-ja="言語的・感覚的マイノリティが知識創造の主体的な担い手となるよう、科学的実践を変革します。">Transforming scientific practice so that linguistic and sensory minorities are active agents in the creation of knowledge.</p>
                     <div class="hero-actions">
-                        <a href="#pillars" class="btn btn-primary">Our Core Pillars</a>
-                        <a href="research.html" class="btn btn-secondary">Explore Research</a>
+                        <a href="#pillars" class="btn btn-primary" data-en="Our Core Pillars" data-ja="5つの柱">Our Core Pillars</a>
+                        <a href="research.html" class="btn btn-secondary" data-en="Explore Research" data-ja="研究を見る">Explore Research</a>
+                        <a href="members.html" class="btn btn-secondary" data-en="View All Members" data-ja="メンバー一覧">View All Members</a>
                     </div>
                 </div>
                 <div class="hero-video">
-                    <p class="hero-video-label">Watch in Sign Language</p>
+                    <p class="hero-video-label" data-en="Watch in Sign Language" data-ja="手話で見る">Watch in Sign Language</p>
                     <video controls preload="metadata">
                         <source src="images/aspire_sign_language.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -55,7 +59,6 @@
                 </div>
             </div>
             <div class="hero-background"></div>
-            <!-- Decorative SVG shapes -->
             <svg class="hero-deco hero-deco-1" width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="150" cy="150" r="150" fill="var(--primary-color)" opacity="0.04"/>
             </svg>
@@ -68,17 +71,17 @@
         <section id="mission" class="section mission-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Our Vision</h2>
-                    <p class="section-desc">To truly support Deaf communities, AI needs to recognize not just signs — but the people who are using them collaboratively.</p>
+                    <h2 class="section-title" data-en="Our Vision" data-ja="ビジョン">Our Vision</h2>
+                    <p class="section-desc" data-en="To truly support Deaf communities, AI needs to recognize not just signs — but the people who are using them collaboratively." data-ja="ろうコミュニティを真に支援するために、AIは手話だけでなく、それを協働的に使う人々を認識する必要があります。">To truly support Deaf communities, AI needs to recognize not just signs — but the people who are using them collaboratively.</p>
                 </div>
                 <div class="mission-grid">
                     <div class="mission-card">
-                        <h3>Co-Construction</h3>
-                        <p>Acknowledging that communication is co-constructed, as seen in improvisational signing.</p>
+                        <h3 data-en="Co-Construction" data-ja="共同構築">Co-Construction</h3>
+                        <p data-en="Acknowledging that communication is co-constructed, as seen in improvisational signing." data-ja="即興的な手話に見られるように、コミュニケーションは共同で構築されるものであることを認識します。">Acknowledging that communication is co-constructed, as seen in improvisational signing.</p>
                     </div>
                     <div class="mission-card">
-                        <h3>Active Agency</h3>
-                        <p>Moving beyond "subjects of analysis" to "active agents" in scientific knowledge creation.</p>
+                        <h3 data-en="Active Agency" data-ja="主体的な参画">Active Agency</h3>
+                        <p data-en='Moving beyond "subjects of analysis" to "active agents" in scientific knowledge creation.' data-ja="「分析の対象」から科学的知識創造における「主体的な担い手」へ。">Moving beyond "subjects of analysis" to "active agents" in scientific knowledge creation.</p>
                     </div>
                 </div>
             </div>
@@ -88,14 +91,14 @@
         <section id="lead" class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Project Lead</h2>
+                    <h2 class="section-title" data-en="Project Lead" data-ja="プロジェクトリーダー">Project Lead</h2>
                 </div>
                 <div class="lead-profile">
                     <img src="images/lab/bono_cheaf800680.png" alt="Mayumi Bono" class="lead-photo">
                     <div class="lead-info">
                         <h3>Mayumi Bono</h3>
-                        <p>Associate Professor, National Institute of Informatics (NII)</p>
-                        <p>Leading the ASPIRE project to create a world where linguistic and sensory minorities are active agents in science.</p>
+                        <p data-en="Associate Professor, National Institute of Informatics (NII)" data-ja="国立情報学研究所（NII）准教授">Associate Professor, National Institute of Informatics (NII)</p>
+                        <p data-en="Leading the ASPIRE project to create a world where linguistic and sensory minorities are active agents in science." data-ja="言語的・感覚的マイノリティが科学における主体的な担い手となる世界の実現に向けて、ASPIREプロジェクトを推進しています。">Leading the ASPIRE project to create a world where linguistic and sensory minorities are active agents in science.</p>
                     </div>
                 </div>
             </div>
@@ -105,33 +108,38 @@
         <section id="pillars" class="section pillars-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Pillars of Inclusive Science</h2>
+                    <h2 class="section-title" data-en="Pillars of Inclusive Science" data-ja="インクルーシブ・サイエンスの5つの柱">Pillars of Inclusive Science</h2>
                 </div>
                 <div class="pillars-grid">
-                    <article class="pillar-card">
-                        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-                        <h3>Linguistic Inclusion</h3>
-                        <p>Acknowledging sign languages, tactile languages, and multimodal repertoires as full and legitimate scientific resources.</p>
+                    <article class="pillar-card pillar-linguistic">
+                        <div class="pillar-accent"></div>
+                        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                        <h3 data-en="Linguistic" data-ja="言語的包摂">Linguistic</h3>
+                        <p data-en="Acknowledging sign languages, tactile languages, and multimodal repertoires as full and legitimate scientific resources." data-ja="手話、触覚言語、マルチモーダルなレパートリーを、正当な科学的資源として認識します。">Acknowledging sign languages, tactile languages, and multimodal repertoires as full and legitimate scientific resources.</p>
                     </article>
-                    <article class="pillar-card">
-                        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-                        <h3>Interactional Inclusion</h3>
-                        <p>Valuing handshape, gaze, touch, and spatial coordination as forms of reasoning and theorizing.</p>
+                    <article class="pillar-card pillar-interactional">
+                        <div class="pillar-accent"></div>
+                        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                        <h3 data-en="Interactional" data-ja="相互行為的包摂">Interactional</h3>
+                        <p data-en="Valuing handshape, gaze, touch, and spatial coordination as forms of reasoning and theorizing." data-ja="手の形、視線、触覚、空間的協調を推論・理論化の形式として重視します。">Valuing handshape, gaze, touch, and spatial coordination as forms of reasoning and theorizing.</p>
                     </article>
-                    <article class="pillar-card">
-                        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></div>
-                        <h3>Epistemic Inclusion</h3>
-                        <p>Involving Deaf communities in defining research problems, interpreting data, and shaping frameworks.</p>
+                    <article class="pillar-card pillar-epistemic">
+                        <div class="pillar-accent"></div>
+                        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></div>
+                        <h3 data-en="Epistemic" data-ja="認識論的包摂">Epistemic</h3>
+                        <p data-en="Involving Deaf communities in defining research problems, interpreting data, and shaping frameworks." data-ja="研究課題の定義、データ解釈、枠組み形成にろうコミュニティを参画させます。">Involving Deaf communities in defining research problems, interpreting data, and shaping frameworks.</p>
                     </article>
-                    <article class="pillar-card">
-                        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-                        <h3>Technological Inclusion</h3>
-                        <p>Designing AI and corpus tools that respect the structural specificities of sign and tactile interaction.</p>
+                    <article class="pillar-card pillar-technological">
+                        <div class="pillar-accent"></div>
+                        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                        <h3 data-en="Technological" data-ja="技術的包摂">Technological</h3>
+                        <p data-en="Designing AI and corpus tools that respect the structural specificities of sign and tactile interaction." data-ja="手話や触覚的インタラクションの構造的特性を尊重するAI・コーパスツールを設計します。">Designing AI and corpus tools that respect the structural specificities of sign and tactile interaction.</p>
                     </article>
-                    <article class="pillar-card">
-                        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><path d="M9 10h1"/><path d="M14 10h1"/><path d="M9 14h1"/><path d="M14 14h1"/></svg></div>
-                        <h3>Institutional Inclusion</h3>
-                        <p>Establishing structures where people are co-researchers, advisors, and decision-makers.</p>
+                    <article class="pillar-card pillar-institutional">
+                        <div class="pillar-accent"></div>
+                        <div class="pillar-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><path d="M9 10h1"/><path d="M14 10h1"/><path d="M9 14h1"/><path d="M14 14h1"/></svg></div>
+                        <h3 data-en="Institutional" data-ja="制度的包摂">Institutional</h3>
+                        <p data-en="Establishing structures where people are co-researchers, advisors, and decision-makers." data-ja="人々が共同研究者、アドバイザー、意思決定者となる体制を構築します。">Establishing structures where people are co-researchers, advisors, and decision-makers.</p>
                     </article>
                 </div>
             </div>
@@ -141,8 +149,8 @@
         <section class="section team-preview-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Meet Our Team</h2>
-                    <p class="section-desc">A multidisciplinary collaboration across the UK and Japan, spanning linguistics, computer vision, AI, and Deaf studies.</p>
+                    <h2 class="section-title" data-en="Meet Our Team" data-ja="チーム紹介">Meet Our Team</h2>
+                    <p class="section-desc" data-en="A multidisciplinary collaboration across the UK and Japan, spanning linguistics, computer vision, AI, and Deaf studies." data-ja="言語学、コンピュータビジョン、AI、ろう研究にまたがる、日英の学際的コラボレーション。">A multidisciplinary collaboration across the UK and Japan, spanning linguistics, computer vision, AI, and Deaf studies.</p>
                 </div>
                 <div class="team-preview-grid">
                     <div class="team-preview-member">
@@ -176,9 +184,6 @@
                         <p class="team-preview-role">Co-PI, Kyoto University</p>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 2rem;">
-                    <a href="members.html" class="btn btn-primary">View All Members</a>
-                </div>
             </div>
         </section>
 
@@ -186,7 +191,7 @@
         <section class="section logos-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title" style="font-size: 1.75rem;">Partner Institutions</h2>
+                    <h2 class="section-title" style="font-size: 1.75rem;" data-en="Partner Institutions" data-ja="パートナー機関">Partner Institutions</h2>
                 </div>
                 <div class="logos-grid">
                     <img src="images/logos/nii.png" alt="National Institute of Informatics">
@@ -210,18 +215,18 @@
                 <p>Advanced Science for Partnership and Inclusive Research Engagement</p>
             </div>
             <div class="footer-contact">
-                <h4>Contact</h4>
+                <h4 data-en="Contact" data-ja="お問い合わせ">Contact</h4>
                 <p>Mayumi Bono, Ph.D.</p>
-                <p>Associate Professor</p>
+                <p data-en="Associate Professor" data-ja="准教授">Associate Professor</p>
                 <p><a href="mailto:bono@nii.ac.jp">bono@nii.ac.jp</a></p>
-                <p><a href="http://research.nii.ac.jp/~bono/" target="_blank" rel="noopener">Researcher Profile</a></p>
+                <p><a href="http://research.nii.ac.jp/~bono/" target="_blank" rel="noopener" data-en="Researcher Profile" data-ja="研究者プロフィール">Researcher Profile</a></p>
             </div>
-            <div class="footer-address" lang="ja">
-                <h4>Address</h4>
-                <p>National Institute of Informatics (NII)</p>
-                <p>SOKENDAI (The Graduate University for Advanced Studies)</p>
-                <p>2-1-2 Hitotsubashi, Chiyoda-ku</p>
-                <p>Tokyo 101-8430, Japan</p>
+            <div class="footer-address">
+                <h4 data-en="Address" data-ja="所在地">Address</h4>
+                <p data-en="National Institute of Informatics (NII)" data-ja="国立情報学研究所（NII）">National Institute of Informatics (NII)</p>
+                <p data-en="SOKENDAI (The Graduate University for Advanced Studies)" data-ja="総合研究大学院大学（SOKENDAI）">SOKENDAI (The Graduate University for Advanced Studies)</p>
+                <p lang="ja" data-en="2-1-2 Hitotsubashi, Chiyoda-ku" data-ja="〒101-8430 東京都千代田区一ツ橋2-1-2">2-1-2 Hitotsubashi, Chiyoda-ku</p>
+                <p data-en="Tokyo 101-8430, Japan" data-ja="">Tokyo 101-8430, Japan</p>
             </div>
         </div>
         <div class="container">
