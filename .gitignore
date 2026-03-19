@@ -1,1 +1,5 @@
 .DS_Store
+# Unused extracted pptx assets
+images/pptx/image*
+images/pptx/media*.m4a
+images/pptx/media*.mov

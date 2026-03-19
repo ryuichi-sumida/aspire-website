@@ -6,7 +6,8 @@
     <title>ASPIRE - Inclusive Science</title>
     <meta name="description" content="Transforming scientific practice for Linguistic, Interactional, Epistemic, Technological, and Institutional inclusion.">
     <link rel="stylesheet" href="styles.css">
-    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,18 +35,36 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container hero-content">
-                <h1 class="hero-title">Inclusive Science</h1>
-                <p class="hero-subtitle">Transforming scientific practice so that linguistic and sensory minorities are active agents in the creation of knowledge.</p>
-                <div class="hero-actions">
-                    <a href="#pillars" class="btn btn-primary">Our Core Pillars</a>
-                    <a href="research.html" class="btn btn-secondary">Explore Research</a>
+        <!-- Hero with decorative background -->
+        <section class="hero hero-decorated">
+            <div class="container hero-split">
+                <div class="hero-content">
+                    <h1 class="hero-title">Inclusive Science</h1>
+                    <p class="hero-subtitle">Transforming scientific practice so that linguistic and sensory minorities are active agents in the creation of knowledge.</p>
+                    <div class="hero-actions">
+                        <a href="#pillars" class="btn btn-primary">Our Core Pillars</a>
+                        <a href="research.html" class="btn btn-secondary">Explore Research</a>
+                    </div>
+                </div>
+                <div class="hero-video">
+                    <p class="hero-video-label">Watch in Sign Language</p>
+                    <video controls preload="metadata">
+                        <source src="images/aspire_sign_language.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
             <div class="hero-background"></div>
+            <!-- Decorative SVG shapes -->
+            <svg class="hero-deco hero-deco-1" width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="150" cy="150" r="150" fill="var(--primary-color)" opacity="0.04"/>
+            </svg>
+            <svg class="hero-deco hero-deco-2" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="100" fill="var(--secondary-color)" opacity="0.05"/>
+            </svg>
         </section>
 
+        <!-- Vision -->
         <section id="mission" class="section mission-section">
             <div class="container">
                 <div class="section-header">
@@ -65,31 +84,24 @@
             </div>
         </section>
 
+        <!-- Project Lead -->
         <section id="lead" class="section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Project Lead</h2>
                 </div>
-                <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; flex-wrap: wrap;">
-                    <img src="images/lab/bono_cheaf800680.png" alt="Mayumi Bono" style="border-radius: 50%; width: 300px; height: 300px; object-fit: cover; border: 4px solid var(--primary-color);">
-                    <div style="max-width: 600px;">
+                <div class="lead-profile">
+                    <img src="images/lab/bono_cheaf800680.png" alt="Mayumi Bono" class="lead-photo">
+                    <div class="lead-info">
                         <h3>Mayumi Bono</h3>
                         <p>Associate Professor, National Institute of Informatics (NII)</p>
                         <p>Leading the ASPIRE project to create a world where linguistic and sensory minorities are active agents in science.</p>
                     </div>
                 </div>
-                <div style="margin-top: 3rem; text-align: center;">
-                    <h3 style="margin-bottom: 1rem;">Watch in Sign Language</h3>
-                    <div style="max-width: 700px; margin: 0 auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden;">
-                        <video controls preload="metadata" style="width: 100%; display: block; border-radius: 8px;">
-                            <source src="images/aspire_sign_language.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
             </div>
         </section>
 
+        <!-- Pillars -->
         <section id="pillars" class="section pillars-section">
             <div class="container">
                 <div class="section-header">
@@ -124,6 +136,71 @@
                 </div>
             </div>
         </section>
+
+        <!-- Meet Our Team Preview -->
+        <section class="section team-preview-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Meet Our Team</h2>
+                    <p class="section-desc">A multidisciplinary collaboration across the UK and Japan, spanning linguistics, computer vision, AI, and Deaf studies.</p>
+                </div>
+                <div class="team-preview-grid">
+                    <div class="team-preview-member">
+                        <img src="images/members/richard_bowden.jpg" alt="Richard Bowden">
+                        <p class="team-preview-name">Richard Bowden</p>
+                        <p class="team-preview-role">PI, University of Surrey</p>
+                    </div>
+                    <div class="team-preview-member">
+                        <img src="images/members/mayumi_bono.png" alt="Mayumi Bono">
+                        <p class="team-preview-name">Mayumi Bono</p>
+                        <p class="team-preview-role">PI, NII / SOKENDAI</p>
+                    </div>
+                    <div class="team-preview-member">
+                        <img src="images/members/annelies_kusters.jpg" alt="Annelies Kusters">
+                        <p class="team-preview-name">Annelies Kusters</p>
+                        <p class="team-preview-role">Co-PI, Heriot-Watt</p>
+                    </div>
+                    <div class="team-preview-member">
+                        <img src="images/members/kearsy_cormier.jpg" alt="Kearsy Cormier">
+                        <p class="team-preview-name">Kearsy Cormier</p>
+                        <p class="team-preview-role">Co-PI, UCL</p>
+                    </div>
+                    <div class="team-preview-member">
+                        <img src="images/members/robert_adam.jpg" alt="Robert Adam">
+                        <p class="team-preview-name">Robert Adam</p>
+                        <p class="team-preview-role">Co-PI, Heriot-Watt</p>
+                    </div>
+                    <div class="team-preview-member">
+                        <img src="images/members/koji_inoue.jpg" alt="Koji Inoue">
+                        <p class="team-preview-name">Koji Inoue</p>
+                        <p class="team-preview-role">Co-PI, Kyoto University</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="members.html" class="btn btn-primary">View All Members</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Institution Logos -->
+        <section class="section logos-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" style="font-size: 1.75rem;">Partner Institutions</h2>
+                </div>
+                <div class="logos-grid">
+                    <img src="images/logos/nii.png" alt="National Institute of Informatics">
+                    <img src="images/logos/surrey.png" alt="University of Surrey">
+                    <img src="images/logos/ucl.png" alt="University College London">
+                    <img src="images/logos/heriot_watt.png" alt="Heriot-Watt University">
+                    <img src="images/logos/kyoto_u.png" alt="Kyoto University">
+                    <img src="images/logos/u_tokyo.png" alt="The University of Tokyo">
+                    <img src="images/logos/isct.png" alt="Institute of Science Tokyo">
+                    <img src="images/logos/tsukuba_tech.png" alt="Tsukuba University of Technology">
+                    <img src="images/logos/sokendai.png" alt="SOKENDAI">
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="contact" class="footer">
@@ -133,9 +210,22 @@
                 <p>Advanced Science for Partnership and Inclusive Research Engagement</p>
             </div>
             <div class="footer-contact">
-                <p>Contact: <a href="mailto:bono@nii.ac.jp">bono@nii.ac.jp</a></p>
-                <p>&copy; 2026 ASPIRE Project. All Rights Reserved.</p>
+                <h4>Contact</h4>
+                <p>Mayumi Bono, Ph.D.</p>
+                <p>Associate Professor</p>
+                <p><a href="mailto:bono@nii.ac.jp">bono@nii.ac.jp</a></p>
+                <p><a href="http://research.nii.ac.jp/~bono/" target="_blank" rel="noopener">Researcher Profile</a></p>
             </div>
+            <div class="footer-address" lang="ja">
+                <h4>Address</h4>
+                <p>National Institute of Informatics (NII)</p>
+                <p>SOKENDAI (The Graduate University for Advanced Studies)</p>
+                <p>2-1-2 Hitotsubashi, Chiyoda-ku</p>
+                <p>Tokyo 101-8430, Japan</p>
+            </div>
+        </div>
+        <div class="container">
+            <p class="footer-copy">&copy; 2026 ASPIRE Project. All Rights Reserved.</p>
         </div>
     </footer>
 
