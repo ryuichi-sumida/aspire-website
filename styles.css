@@ -64,6 +64,37 @@ h3 { font-size: 1.75rem; }
 
 p { margin-bottom: var(--spacing-sm); }
 
+/* Japanese Typography
+   Latin fonts (Inter / Playfair Display) have no Japanese glyphs, so without
+   this block JA text falls back to OS defaults — mincho serif for headings. */
+:root:lang(ja) {
+    --font-heading: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+    --font-body: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+}
+
+:root:lang(ja) body {
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+}
+
+:root:lang(ja) h1,
+:root:lang(ja) h2,
+:root:lang(ja) h3,
+:root:lang(ja) h4,
+:root:lang(ja) h5,
+:root:lang(ja) h6 {
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    font-feature-settings: "palt";
+}
+
+/* The ASPIRE wordmark stays in the brand font in both languages */
+:root:lang(ja) .logo,
+:root:lang(ja) .footer-logo {
+    font-family: 'Playfair Display', serif;
+}
+
 /* Layout Utilities */
 .container {
     max-width: 1200px;
