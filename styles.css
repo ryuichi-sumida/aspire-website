@@ -78,6 +78,12 @@ p { margin-bottom: var(--spacing-sm); }
     --font-body: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', sans-serif;
 }
 
+/* Japanese fragments (e.g. citations) inside an English page still need a
+   Japanese-capable font stack — :root:lang(ja) alone won't reach them. */
+[lang="ja"] {
+    font-family: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+}
+
 :root:lang(ja) body {
     line-height: 1.8;
     letter-spacing: 0.02em;
@@ -625,117 +631,272 @@ p { margin-bottom: var(--spacing-sm); }
     text-decoration: underline;
 }
 
-/* Repositories Grid (code.html) */
-.repos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: var(--spacing-md);
-}
-
-.repo-card {
-    background: var(--bg-light);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-subtle);
-    box-shadow: var(--shadow);
-    padding: var(--spacing-md);
-    border-left: 3px solid var(--secondary-color);
-    display: flex;
-    flex-direction: column;
-    transition: var(--transition);
-}
-
-.repo-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lift);
-}
-
-.repo-card-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    margin-bottom: var(--spacing-sm);
-}
-
-.repo-icon {
-    flex-shrink: 0;
-    fill: var(--primary-color);
-    margin-top: 4px;
-}
-
-.repo-card-heading {
-    flex: 1;
-    min-width: 0;
-}
-
-.repo-name {
-    font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-    word-break: break-word;
-    line-height: 1.3;
-}
-
-.repo-name a {
-    color: var(--primary-color);
-}
-
-.repo-name a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
-}
-
-.repo-owner {
+/* Publications Page */
+.hero-note {
     font-size: 0.85rem;
     color: #666;
     margin-bottom: 0;
 }
 
-.repo-description {
-    font-size: 0.9rem;
-    color: #444;
-    line-height: 1.55;
-    margin-bottom: var(--spacing-sm);
-    flex: 1;
+/* At-a-glance counters */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
 }
 
-.repo-tags {
+.stat-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1rem;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--secondary-color);
+    margin-bottom: 0.4rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+}
+
+/* In-page section jumps */
+.page-nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-bottom: var(--spacing-sm);
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: var(--spacing-md);
 }
 
-.repo-tag {
+.page-nav a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background: var(--bg-light);
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    padding: 6px 16px;
+}
+
+.page-nav a:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Publication entries */
+.pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+}
+
+.pub-item {
+    background: var(--bg-light);
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.25rem 1.5rem;
+}
+
+.pub-date {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+}
+
+.pub-citation {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #333;
+    margin-bottom: 0.6rem;
+}
+
+.pub-citation em {
+    color: var(--primary-color);
+}
+
+.pub-note {
+    font-size: 0.85rem;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 0.6rem;
+}
+
+/* English rendering of a Japanese title — hidden in JA mode via data-ja="" */
+.pub-translation {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.55;
+    margin-bottom: 0.6rem;
+}
+
+.pub-translation::before {
+    content: "\21B3\00A0";
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.pub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.pub-tag {
     display: inline-block;
     background: var(--bg-off-white);
     color: #555;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     padding: 3px 10px;
     border-radius: 12px;
     border: 1px solid #e0e4e8;
 }
 
-.repo-tag-lang {
+.pub-tag-strong {
     background: var(--primary-color);
     color: var(--text-light);
     border-color: var(--primary-color);
     font-weight: 500;
 }
 
-.repo-card-footer {
-    margin-top: auto;
-    padding-top: 0.5rem;
-}
-
-.repo-link {
-    color: var(--secondary-color);
+.pub-link {
+    font-size: 0.8rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    color: var(--secondary-color);
+    word-break: break-word;
 }
 
-.repo-link:hover {
+.pub-link:hover {
     color: var(--primary-color);
     text-decoration: underline;
+}
+
+/* Featured events */
+.event-featured {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.event-card {
+    background: var(--bg-off-white);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    transition: var(--transition);
+}
+
+.event-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+}
+
+.event-date {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.event-title {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+}
+
+.event-venue {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.event-desc {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+/* Regular sessions table */
+.event-subhead {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+}
+
+.event-subnote {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: var(--spacing-md);
+}
+
+.event-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius);
+}
+
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    min-width: 560px;
+}
+
+.event-table th {
+    background: var(--bg-off-white);
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #555;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.event-table td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+    color: #333;
+}
+
+.event-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.event-table tbody tr:hover {
+    background: var(--bg-off-white);
+}
+
+.event-table td:first-child {
+    white-space: nowrap;
+    color: #666;
 }
 
 /* Footer */
@@ -876,7 +1037,7 @@ p { margin-bottom: var(--spacing-sm); }
 
     .pillar-card:hover,
     .member-card:hover,
-    .repo-card:hover,
+    .event-card:hover,
     .team-preview-member:hover {
         transform: none;
     }
