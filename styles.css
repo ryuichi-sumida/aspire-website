@@ -101,7 +101,7 @@ p { margin-bottom: var(--spacing-sm); }
     font-feature-settings: "palt";
 }
 
-/* The ASPIRE wordmark stays in the brand serif in both languages */
+/* The UMCS wordmark stays in the brand serif in both languages */
 .logo,
 .footer-logo {
     font-family: var(--font-brand);
@@ -198,6 +198,24 @@ p { margin-bottom: var(--spacing-sm); }
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.logo-tagline {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #5a6472;
+    margin-left: 0.75rem;
+    padding-left: 0.75rem;
+    border-left: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 1100px) {
+    .logo-tagline {
+        display: none;
+    }
 }
 
 /* Language Toggle */
@@ -276,6 +294,19 @@ p { margin-bottom: var(--spacing-sm); }
 .hero-title {
     color: var(--primary-color);
     margin-bottom: var(--spacing-md);
+}
+
+.hero-title.hero-title-long {
+    font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+}
+
+.hero-eyebrow {
+    font-family: var(--font-brand);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
@@ -361,27 +392,7 @@ p { margin-bottom: var(--spacing-sm); }
     max-width: 600px;
 }
 
-/* Mission Section */
-.mission-section {
-    background-color: var(--bg-light);
-}
-
-.mission-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-md);
-}
-
-.mission-card {
-    background: var(--bg-off-white);
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-subtle);
-    border-left: 3px solid var(--secondary-color);
-}
-
-/* Pillars Section */
+/* Principles Section */
 .pillars-section {
     background-color: var(--bg-dark);
     color: var(--text-light);
@@ -389,6 +400,10 @@ p { margin-bottom: var(--spacing-sm); }
 
 .pillars-section .section-title {
     color: var(--text-light);
+}
+
+.pillars-section .section-desc {
+    color: rgba(255,255,255,0.75);
 }
 
 .section-header {
@@ -407,7 +422,7 @@ p { margin-bottom: var(--spacing-sm); }
 
 @media (min-width: 1100px) {
     .pillars-grid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 1.25rem;
     }
 }
@@ -550,6 +565,14 @@ p { margin-bottom: var(--spacing-sm); }
 .logos-grid img:hover {
     filter: grayscale(0%);
     opacity: 1;
+}
+
+.funding-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    max-width: 640px;
+    margin: 2rem auto 0;
 }
 
 /* Members Grid */
@@ -913,8 +936,16 @@ p { margin-bottom: var(--spacing-sm); }
     gap: var(--spacing-md);
 }
 
+.footer-info {
+    max-width: 24rem;
+}
+
 .footer-info p {
     color: #a0a0a0;
+}
+
+.footer-funding {
+    font-size: 0.85rem;
 }
 
 .footer h4 {
